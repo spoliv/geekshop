@@ -1,0 +1,15 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IGRpbW9u?=
+From: webmaster@localhost
+To: dimon@dimon.ru
+Date: Mon, 29 Apr 2019 18:40:23 -0000
+Message-ID: 
+ <155656322329.1908.15453164802973930169@LAPTOP-HRAS4SJB.mshome.net>
+
+Для подтверждения учетной записи dimon на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/dimon@dimon.ru/c12aef5a65421efd82d7bbe48678598830c6e1a0/
+-------------------------------------------------------------------------------

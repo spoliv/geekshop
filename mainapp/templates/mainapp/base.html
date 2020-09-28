@@ -1,0 +1,112 @@
+ <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<title>
+    {% block title %}
+        {{ title|title }}
+        {% endblock %}
+</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block css %}
+    {% endblock %}
+
+    {% block js %}
+    {% endblock %}
+</head>
+
+<body class="body">
+   <div class="wrapper">
+    <div class="top">
+        <div class="container">
+         
+          {% block menu %}   
+          {% endblock %}
+          
+          {% block content %}  
+          {% endblock %}         
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <div class="footer-back">
+                <div class="contact-block">
+                    <div class="contact-headers">
+                        <h3 class="contact-us">contact us</h3>
+                        <h3 class="useful-inf">useful information</h3>
+                        <h3 class="stay-touch">Let’s Stay in Touch!</h3>
+                    </div>
+                    <div class="contact-info">
+                        <div class="address-block">
+                            <a href="#" class="useful-link">
+                                <p class="address-block-p1">132A Bridge Road Richmond VIC Australia.</p>
+                            </a>
+                            <a href="#" class="useful-link">
+                                <p class="address-block-p2">Talk to us on 1300 132 info@interior.com
+                                </p>
+                            </a>
+
+                        </div>
+                        <div class="useful-text">
+
+                            <div class="sales-text">
+                                <a href="#" class="useful-link">
+                                    <h3 class="h3-sales-text">Sales terms</h3>
+                                </a>
+                                <a href="#" class="useful-link">
+                                    <h3 class="h3-sales-text">Customer care</h3>
+                                </a>
+                                <a href="#" class="useful-link">
+                                    <h3 class="h3-sales-text">Delivery</h3>
+                                </a>
+                            </div>
+                            <div class="sales-text1">
+                                <a href="#" class="useful-link">
+                                    <h3 class="h3-sales-text">Architect accounts</h3>
+                                </a>
+                                <a href="#" class="useful-link">
+                                    <h3 class="h3-sales-text">Careers</h3>
+                                </a>
+                                <a href="#" class="useful-link">
+                                    <h3 class="h3-sales-text">Exchanges & returns</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="email-block">
+                            <p class="stay-touch-text">Suscribe to know about our latest news, products and special offers just for suscribers.</p>
+                            <div class="email-field">
+                                <input type="email" placeholder="your email address" name="login">
+                                <input type="image" src="{% static 'img/send.png' %}" alt="OK" class="send">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="bottom-part">
+                        <h3 class="copyright-h3">&#169; Copyright - INTERIOR 2016. All Rights Reserved.</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-google-plus"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                        <a href="#" class="useful-link">
+                            <h3 class="terms-h3">Terms &#38; Conditions / Privacy policy &#38; Cookies</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{% extends 'mainapp/base.html' %}
+{%load static%}
+            
+            {% block menu %}
+               <div class="top-catalog">
+                <div class="header">
+                    <a class="logo" href="{% url 'index' %}"><img src="{% static 'img/logo.svg' %}" alt="logo"></a>
+                        {% include 'mainapp/includes/inc_menu.html' %}
+                </div>
+
+                    <h2 class="top-h2">Contact Us</h2>
+
+            </div>
+            {% endblock %}
+            
+            {% block content %}
+                <div class="contact-data"></div>
+            {% endblock %}
+        

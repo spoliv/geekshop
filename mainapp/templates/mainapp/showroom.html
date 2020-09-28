@@ -1,0 +1,15 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+            {% block menu %}
+            <div class="slider padding-site">
+                <div class="header">
+                    <a class="logo" href="{% url 'index' %}"><img src="{% static 'img/logo.svg' %}" alt="logo"></a>
+                     {% include 'mainapp/includes/inc_menu.html' %}
+                </div>
+            </div>
+            {% endblock %}
+
+            {% block content %}
+                <div class="temp_div"></div>
+            {% endblock %}
