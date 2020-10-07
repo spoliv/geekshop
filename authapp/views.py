@@ -47,7 +47,7 @@ def login(request):
 
         user = auth.authenticate(username=username, password=password)
         if user and user.is_active:
-            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            auth.login(request, user)
             if 'next' in request.POST.keys():
                 return HttpResponseRedirect(request.POST['next'])
             else:
@@ -101,14 +101,13 @@ def verify(request, email, activation_key):
         if user.activation_key == activation_key and user.is_activation_key_valid():
             user.is_active = True
             user.save()
-            auth.login(request, user)
+            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            return render(request, 'authapp/verification.html')
         else:
             print(f'error activation user: {user}')
-        return render(request, 'authapp/verification.html')
+        #return render(request, 'authapp/verification.html')
     except Exception as e:
         print(f'error activation user : {e.args}')
         return HttpResponseRedirect(reverse('index'))
-
-
 
 # Create your views here.
